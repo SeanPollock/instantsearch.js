@@ -54,6 +54,8 @@ function numericRefinementList({
   options,
   cssClasses: userCssClasses = {},
   templates = defaultTemplates,
+  collapsable,
+  collapsed,
   transformData,
   autoHideContainer = true
   }) {
@@ -102,6 +104,8 @@ function numericRefinementList({
 
       ReactDOM.render(
         <RefinementList
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           facetValues={facetValues}
           shouldAutoHideContainer={results.nbHits === 0}

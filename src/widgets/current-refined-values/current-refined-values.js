@@ -79,6 +79,8 @@ function currentRefinedValues({
     onlyListedAttributes = false,
     clearAll = 'before',
     templates = defaultTemplates,
+    collapsable,
+    collapsed,
     transformData,
     autoHideContainer = true,
     cssClasses: userCssClasses = {}
@@ -179,6 +181,8 @@ function currentRefinedValues({
           clearAllURL={clearAllURL}
           clearRefinementClicks={clearRefinementClicks}
           clearRefinementURLs={clearRefinementURLs}
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           refinements={refinements}
           shouldAutoHideContainer={shouldAutoHideContainer}

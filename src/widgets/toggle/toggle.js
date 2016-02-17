@@ -61,6 +61,8 @@ function toggle({
     label,
     values: userValues = {on: true, off: undefined},
     templates = defaultTemplates,
+    collapsable,
+    collapsed,
     cssClasses: userCssClasses = {},
     transformData,
     autoHideContainer = true
@@ -146,6 +148,8 @@ function toggle({
 
       ReactDOM.render(
         <RefinementList
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           facetValues={[facetValue]}
           shouldAutoHideContainer={results.nbHits === 0}

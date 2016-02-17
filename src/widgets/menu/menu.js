@@ -59,6 +59,8 @@ function menu({
     limit = 10,
     cssClasses: userCssClasses = {},
     templates = defaultTemplates,
+    collapsable,
+    collapsed,
     transformData,
     autoHideContainer = true,
     showMore = false
@@ -140,6 +142,8 @@ function menu({
 
       ReactDOM.render(
         <RefinementList
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           facetValues={facetValues}
           limitMax={widgetMaxValuesPerFacet}

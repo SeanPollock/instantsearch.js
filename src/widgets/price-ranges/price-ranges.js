@@ -56,6 +56,8 @@ function priceRanges({
     attributeName,
     cssClasses: userCssClasses = {},
     templates = defaultTemplates,
+    collapsable,
+    collapsed,
     labels: userLabels = {},
     currency = '$',
     autoHideContainer = true
@@ -179,6 +181,8 @@ function priceRanges({
 
       ReactDOM.render(
         <PriceRanges
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           currency={currency}
           facetValues={facetValues}

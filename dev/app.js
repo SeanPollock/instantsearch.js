@@ -122,6 +122,7 @@ search.addWidget(
 
 search.addWidget(
   instantsearch.widgets.refinementList({
+    collapsable: true,
     container: '#brands',
     attributeName: 'brand',
     operator: 'or',

@@ -59,6 +59,8 @@ function starRating({
   cssClasses: userCssClasses = {},
   labels = defaultLabels,
   templates = defaultTemplates,
+  collapsable,
+  collapsed,
   transformData,
   autoHideContainer = true
   }) {
@@ -142,6 +144,8 @@ function starRating({
 
       ReactDOM.render(
         <RefinementList
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           facetValues={facetValues}
           shouldAutoHideContainer={results.nbHits === 0}

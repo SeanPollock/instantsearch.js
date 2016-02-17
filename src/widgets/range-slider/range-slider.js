@@ -51,6 +51,8 @@ function rangeSlider({
     attributeName,
     tooltips = true,
     templates = defaultTemplates,
+    collapsable,
+    collapsed,
     cssClasses: userCssClasses = {},
     step = 1,
     pips = true,
@@ -133,6 +135,8 @@ function rangeSlider({
 
       ReactDOM.render(
         <Slider
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           onChange={this._refine.bind(this, helper, stats)}
           pips={pips}

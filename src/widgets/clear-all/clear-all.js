@@ -46,6 +46,8 @@ function clearAll({
     container,
     templates = defaultTemplates,
     cssClasses: userCssClasses = {},
+    collapsable,
+    collapsed,
     autoHideContainer = true
   } = {}) {
   if (!container) {
@@ -79,6 +81,8 @@ function clearAll({
       ReactDOM.render(
         <ClearAll
           clearAll={this._clearRefinementsAndSearch}
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           hasRefinements={hasRefinements}
           shouldAutoHideContainer={!hasRefinements}

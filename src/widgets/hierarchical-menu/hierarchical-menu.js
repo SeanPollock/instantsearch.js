@@ -64,6 +64,8 @@ function hierarchicalMenu({
     cssClasses: userCssClasses = {},
     autoHideContainer = true,
     templates = defaultTemplates,
+    collapsable,
+    collapsed,
     transformData
   } = {}) {
   if (!container || !attributes || !attributes.length) {
@@ -139,6 +141,8 @@ function hierarchicalMenu({
       ReactDOM.render(
         <RefinementList
           attributeNameKey="path"
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           facetValues={facetValues}
           shouldAutoHideContainer={facetValues.length === 0}

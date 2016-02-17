@@ -54,6 +54,8 @@ refinementList({
   [ templates.{header,item,footer} ],
   [ transformData ],
   [ autoHideContainer=true ],
+  [ collapsable=false ],
+  [ collapsed=false ]
   [ showMore.{templates: {active, inactive}, limit} ]
 })`;
 function refinementList({
@@ -64,6 +66,8 @@ function refinementList({
     limit = 10,
     cssClasses: userCssClasses = {},
     templates = defaultTemplates,
+    collapsable,
+    collapsed,
     transformData,
     autoHideContainer = true,
     showMore = false
@@ -145,6 +149,8 @@ function refinementList({
 
       ReactDOM.render(
         <RefinementList
+          collapsable={collapsable}
+          collapsed={collapsed}
           cssClasses={cssClasses}
           facetValues={facetValues}
           limitMax={widgetMaxValuesPerFacet}
